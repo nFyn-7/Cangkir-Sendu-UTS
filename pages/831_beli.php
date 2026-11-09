@@ -2,8 +2,8 @@
 // BAGIAN MENU
 $menu_831 = [
     'Iced Kopi Guren' => 25000,
-    'Iced Cheezy Latte'=> 30000,
-    'Magic Seasonal'=> 30000,
+    'Iced Cheezy Latte' => 30000,
+    'Magic Seasonal' => 30000,
     'Espresso' => 18000,
     'Americano' => 20000,
     'Cappuccino' => 25000,
@@ -24,14 +24,11 @@ $ukuran_831 = [
     <h2 class="section-title-kelompok-3">Formulir Pembelian</h2>
     <p class="section-intro-kelompok-3">Silakan lengkapi detail di bawah ini untuk memesan minuman favorit Anda.
         Pesanan akan langsung ditampilkan sebagai ringkasan di bawah formulir.</p>
-
+    <div class="foto-profil-wrapper-kelompok-3">
+        <img class="foto-profil-ganjil" src="./assets/form/yuki.jpg" alt="Foto profil" width="140" height="140">
+    </div>
     <form method="POST" action="" class="form-wrapper-kelompok-3">
-        <div class="col-2"></div>
 
-        <div class="foto-profil-wrapper-kelompok-3">
-            <img class="foto-profil-kelompok-3" src="./assets/form/yuki.jpg" alt="Foto profil" width="140"
-                height="140">
-        </div>
         <div class="form-group-kelompok-3">
             <label for="nama_831" class="form-label-kelompok-3">Nama Pelanggan</label>
             <input type="text" id="nama_831" name="nama_831" required class="form-input-kelompok-3">

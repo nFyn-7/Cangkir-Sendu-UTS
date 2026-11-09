@@ -1,5 +1,5 @@
 <!-- Bagian Brand -->
-<a href="kelompok3.php?hal=beranda" class="logo-kelompok-3">
+<a href="kelompok3.php" class="logo-kelompok-3">
     <img src="./assets/Logok.png" alt="" class="img-logo-kelompok-3">
 </a>
 <!-- Bagian Navbar -->

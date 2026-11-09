@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_pembelian_831']
     $catatan_831 = trim($_POST['catatan_831'] ?? '');
 
     if (
-        $nama_831 === '' || $telepon_831 === '' || $jumlah_831 < 1 ||
+        $nama_831 === '' || $telepon_831 === '' || $jumlah_831 < 1 || $jumlah_831 > 50 ||
         !isset($menu_831[$minuman_831]) ||
         !isset($ukuran_831[$ukuran_pilih_831])
     ) {

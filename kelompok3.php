@@ -85,7 +85,7 @@ $tampil_sidebar_kelompok_3 = $halaman_kelompok_3 === null
                                 <article class="produk-card-kelompok-3">
                                     <img class="produk-foto-kelompok-3" src="./assets/gallery/Guren.jpeg"
                                         alt="Iced Kospu Guren" width="600" height="450" loading="lazy" />
-                                    <div class="product-body-kelompok-3">
+                                    <div class="produk-body-kelompok-3">
                                         <h3>Iced Kospu Guren</h3>
                                         <p>
                                             Paduan espresso house blend dengan susu creamy dan kemanisan
@@ -96,7 +96,7 @@ $tampil_sidebar_kelompok_3 = $halaman_kelompok_3 === null
                                 <article class="produk-card-kelompok-3">
                                     <img class="produk-foto-kelompok-3" src="./assets/gallery/CreamCheese.jpeg"
                                         alt="Iced Cheezy Latte" width="600" height="450" loading="lazy" />
-                                    <div class="product-body-kelompok-3">
+                                    <div class="produk-body-kelompok-3">
                                         <h3>Iced Cheezy Latte</h3>
                                         <p>
                                             Paduan Susu dan Krim dengan tambahan keju lokal yang semakin menambah cita rasa.
@@ -106,7 +106,7 @@ $tampil_sidebar_kelompok_3 = $halaman_kelompok_3 === null
                                 <article class="produk-card-kelompok-3">
                                     <img class="produk-foto-kelompok-3" src="./assets/gallery/magic.jpeg"
                                         alt="Magic Seasonal" width="600" height="450" loading="lazy" />
-                                    <div class="product-body-kelompok-3">
+                                    <div class="produk-body-kelompok-3">
                                         <h3>Magic Seasonal</h3>
                                         <p>
                                             Paduan double ristretto dengan susu dan notes seasonal beans dari berbagai

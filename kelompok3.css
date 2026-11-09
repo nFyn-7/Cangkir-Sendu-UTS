@@ -157,7 +157,6 @@ h1 {
 }
 
 .card-hero-kelompok-3 {
-  grid-column: span 4;
   min-height: 550px;
   box-sizing: border-box;
   background:
@@ -246,7 +245,6 @@ h1 {
 
 /* PRE-PRODUK */
 .card-wide-kelompok-3 {
-  grid-column: span 4;
   padding: 30px;
 }
 
@@ -584,4 +582,19 @@ ul {
 
 .sidebar-kontak-kelompok-3 span {
   overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+  .produk-grid-kelompok-3,
+  .promo-grid-kelompok-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .produk-grid-kelompok-3,
+  .promo-grid-kelompok-3,
+  .keuntungan-member-grid-kelompok-3 {
+    grid-template-columns: 1fr;
+  }
 }

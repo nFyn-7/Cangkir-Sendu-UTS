@@ -1,3 +1,18 @@
+<style>
+    .gallery-item-kelompok-3 {
+        height: 100%;
+    }
+
+    .gallery-caption-kelompok-3 {
+        font-family: var(--font-heading);
+        color: var(--primary-dark);
+        font-size: 1rem;
+        margin: 0;
+        padding: 12px 14px;
+        text-align: center;
+    }
+</style>
+
 <div class="card-wide-kelompok-3 card-kelompok-3">
     <h2 class="section-title-kelompok-3">Gallery</h2>
     <p class="section-intro-kelompok-3">Potret sajian dan suasana Cerita Seduh yang menemani hari Anda.</p>

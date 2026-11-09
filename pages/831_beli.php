@@ -20,6 +20,28 @@ $ukuran_831 = [
 ];
 ?>
 
+<style>
+    .foto-profil-wrapper-kelompok-3 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .foto-profil-ganjil {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border: 4px solid var(--primary);
+        border-radius: 0;
+        background-color: var(--white);
+    }
+
+    @media (max-width: 300px) {
+        .foto-profil-ganjil {
+            border-radius: 50%;
+        }
+    }
+</style>
+
 <div class="card-wide-kelompok-3 card-kelompok-3">
     <h2 class="section-title-kelompok-3">Formulir Pembelian</h2>
     <p class="section-intro-kelompok-3">Silakan lengkapi detail di bawah ini untuk memesan minuman favorit Anda.
@@ -56,7 +78,9 @@ $ukuran_831 = [
                 <?php foreach ($ukuran_831 as $nama_ukuran_831 => $tambahan_831): ?>
                     <option value="<?= htmlspecialchars($nama_ukuran_831) ?>">
                         <?= htmlspecialchars($nama_ukuran_831) ?>
-                        <?= $tambahan_831 > 0 ? '(+Rp ' . number_format($tambahan_831, 0, ',', '.') . ')' : '' ?>
+                        <?= $tambahan_831 > 0
+                            ? '(+Rp ' . number_format($tambahan_831, 0, ',', '.') . ')'
+                            : '' ?>
                     </option>
                 <?php endforeach; ?>
             </select>
@@ -82,56 +106,64 @@ $ukuran_831 = [
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_pembelian_831'])) {
 
-    $nama_831 = htmlspecialchars(trim($_POST['nama_831'] ?? ''));
-    $telepon_831 = htmlspecialchars(trim($_POST['telepon_831'] ?? ''));
+    $nama_831 = trim($_POST['nama_831'] ?? '');
+    $telepon_831 = trim($_POST['telepon_831'] ?? '');
     $minuman_831 = $_POST['minuman_831'] ?? '';
     $ukuran_pilih_831 = $_POST['ukuran_831'] ?? '';
     $jumlah_831 = (int) ($_POST['jumlah_831'] ?? 0);
-    $catatan_831 = htmlspecialchars(trim($_POST['catatan_831'] ?? ''));
+    $catatan_831 = trim($_POST['catatan_831'] ?? '');
 
     if (
         $nama_831 === '' || $telepon_831 === '' || $jumlah_831 < 1 ||
-        !isset($menu_831[$minuman_831]) || !isset($ukuran_831[$ukuran_pilih_831])
+        !isset($menu_831[$minuman_831]) ||
+        !isset($ukuran_831[$ukuran_pilih_831])
     ) {
-        echo '<div class="card-wide-kelompok-3 card-kelompok-3 result-container-kelompok-3">';
-        echo '<h3 class="section-title-kelompok-3">Data tidak valid</h3>';
-        echo '<p>Mohon lengkapi formulir dengan benar.</p>';
-        echo '</div>';
+        ?>
+
+        <div class="card-wide-kelompok-3 card-kelompok-3 result-container-kelompok-3">
+            <h3 class="section-title-kelompok-3">Data tidak valid</h3>
+            <p>Mohon lengkapi formulir dengan benar.</p>
+        </div>
+
+        <?php
     } else {
+
         $harga_satuan_831 = $menu_831[$minuman_831] + $ukuran_831[$ukuran_pilih_831];
         $total_831 = $harga_satuan_831 * $jumlah_831;
+        ?>
 
-        echo '<div class="card-wide-kelompok-3 card-kelompok-3 result-container-kelompok-3">';
-        echo '<h3 class="section-title-kelompok-3" style="margin-bottom: 15px;">Ringkasan Pesanan Anda</h3>';
+        <div class="card-wide-kelompok-3 card-kelompok-3 result-container-kelompok-3">
+            <h3 class="section-title-kelompok-3">Ringkasan Pesanan Anda</h3>
+            <div class="result-grid-kelompok-3">
 
-        echo '<div class="result-grid-kelompok-3">';
+                <div class="result-label-kelompok-3">Nama</div>
+                <div>: <?= $nama_831 ?></div>
 
-        echo '<div class="result-label-kelompok-3">Nama</div>';
-        echo '<div>: ' . $nama_831 . '</div>';
+                <div class="result-label-kelompok-3">No. Telepon</div>
+                <div>: <?= $telepon_831 ?></div>
 
-        echo '<div class="result-label-kelompok-3">No. Telepon</div>';
-        echo '<div>: ' . $telepon_831 . '</div>';
+                <div class="result-label-kelompok-3">Minuman</div>
+                <div>: <?= $minuman_831 ?></div>
 
-        echo '<div class="result-label-kelompok-3">Minuman</div>';
-        echo '<div>: ' . htmlspecialchars($minuman_831) . '</div>';
+                <div class="result-label-kelompok-3">Ukuran</div>
+                <div>: <?= $ukuran_pilih_831 ?></div>
 
-        echo '<div class="result-label-kelompok-3">Ukuran</div>';
-        echo '<div>: ' . htmlspecialchars($ukuran_pilih_831) . '</div>';
+                <div class="result-label-kelompok-3">Jumlah</div>
+                <div>: <?= $jumlah_831 ?> Gelas</div>
 
-        echo '<div class="result-label-kelompok-3">Jumlah</div>';
-        echo '<div>: ' . $jumlah_831 . ' Gelas</div>';
+                <div class="result-label-kelompok-3">Harga Satuan</div>
+                <div>: Rp <?= number_format($harga_satuan_831, 0, ',', '.') ?></div>
 
-        echo '<div class="result-label-kelompok-3">Harga Satuan</div>';
-        echo '<div>: Rp ' . number_format($harga_satuan_831, 0, ',', '.') . '</div>';
+                <div class="result-label-kelompok-3">Total Bayar</div>
+                <div><strong>: Rp <?= number_format($total_831, 0, ',', '.') ?></strong></div>
 
-        echo '<div class="result-label-kelompok-3">Total Bayar</div>';
-        echo '<div><strong>: Rp ' . number_format($total_831, 0, ',', '.') . '</strong></div>';
+                <div class="result-label-kelompok-3">Catatan</div>
+                <div>: <?= $catatan_831 !== '' ? nl2br($catatan_831) : '-' ?></div>
 
-        echo '<div class="result-label-kelompok-3">Catatan</div>';
-        echo '<div>: ' . ($catatan_831 !== '' ? nl2br($catatan_831) : '-') . '</div>';
+            </div>
+        </div>
 
-        echo '</div>';
-        echo '</div>';
+        <?php
     }
 }
 ?>

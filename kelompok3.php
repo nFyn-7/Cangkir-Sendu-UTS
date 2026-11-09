@@ -29,7 +29,7 @@ $tampil_sidebar_kelompok_3 = $halaman_kelompok_3 === null
         <div class="row g-3">
 
             <?php if ($tampil_sidebar_kelompok_3): ?>
-                <aside class="col-md-4 col-lg-3">
+                <aside class="col-md-4 col-lg-3                                                                                                                                                                                                                                     ">
                     <div class="card-kelompok-3 sidebar-kelompok-3">
                         <h2 class="section-title-kelompok-3">Jam Operasional</h2>
                         <p class="jam-hari-kelompok-3">Setiap Hari</p>

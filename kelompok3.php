@@ -4,7 +4,6 @@
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="kelompok3.css">
-    <link rel="stylesheet" href="kelompok3_bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,8 +32,8 @@
 
                         <h2 class="section-title-kelompok-3">Lokasi &amp; Kontak</h2>
                         <ul class="sidebar-kontak-kelompok-3">
-                            <li><i class="fa-solid fa-location-dot"></i><span>Jl. Contoh No. 1, Kota Anda</span></li>
-                            <li><i class="fa-solid fa-phone"></i><span>0812-3456-7890</span></li>
+                            <li><i class="fa-solid fa-location-dot"></i><span>Jl. Kutai Utara  No. 1, Kecamatan Banjarsari, Kota Surakarta (Solo), Jawa Tengah</span></li>
+                            <li><i class="fa-solid fa-phone"></i><span>0812-6767-6767</span></li>
                             <li><i class="fa-brands fa-instagram"></i><span>@cerita.seduh</span></li>
                         </ul>
 

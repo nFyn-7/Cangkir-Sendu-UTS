@@ -65,8 +65,8 @@ $ukuran_831 = [
             <select id="minuman_831" name="minuman_831" required class="form-input-kelompok-3">
                 <option value="">-- Pilih Minuman --</option>
                 <?php foreach ($menu_831 as $nama_menu_831 => $harga_menu_831): ?>
-                    <option value="<?= htmlspecialchars($nama_menu_831) ?>">
-                        <?= htmlspecialchars($nama_menu_831) ?> (Rp <?= number_format($harga_menu_831, 0, ',', '.') ?>)
+                    <option value="<?= $nama_menu_831 ?>">
+                        <?= $nama_menu_831 ?> (Rp <?= number_format($harga_menu_831, 0, ',', '.') ?>)
                     </option>
                 <?php endforeach; ?>
             </select>
@@ -76,8 +76,8 @@ $ukuran_831 = [
             <select id="ukuran_831" name="ukuran_831" required class="form-input-kelompok-3">
                 <option value="">-- Pilih Ukuran --</option>
                 <?php foreach ($ukuran_831 as $nama_ukuran_831 => $tambahan_831): ?>
-                    <option value="<?= htmlspecialchars($nama_ukuran_831) ?>">
-                        <?= htmlspecialchars($nama_ukuran_831) ?>
+                    <option value="<?= $nama_ukuran_831 ?>">
+                        <?= $nama_ukuran_831 ?>
                         <?= $tambahan_831 > 0
                             ? '(+Rp ' . number_format($tambahan_831, 0, ',', '.') . ')'
                             : '' ?>

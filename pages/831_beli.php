@@ -21,11 +21,6 @@ $ukuran_831 = [
 ?>
 
 <style>
-    .foto-profil-wrapper-kelompok-3 {
-        display: flex;
-        justify-content: center;
-    }
-
     .foto-profil-ganjil {
         width: 140px;
         height: 140px;

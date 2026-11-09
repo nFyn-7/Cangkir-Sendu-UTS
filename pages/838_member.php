@@ -1,8 +1,32 @@
+<style>
+    /* Foto Profil NIM Genap */
+    .foto-profil-genap {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border: 4px solid var(--primary);
+        border-radius: 50%;
+        background-color: var(--white);
+    }
+
+    @media (width: 200px) {
+        .foto-profil-genap {
+            border-radius: 0;
+        }
+    }
+</style>
+
 <div class="card-wide-kelompok-3 card-kelompok-3">
     <h2 class="section-title-kelompok-3">Pendaftaran Member</h2>
     <p class="section-intro-kelompok-3">Bergabunglah dengan program keanggotaan kami untuk mendapatkan berbagai
         penawaran eksklusif, poin *reward*, dan informasi promosi terbaru. Seluruh data Anda akan dikelola dengan
         tingkat privasi dan keamanan yang tinggi.</p>
+
+    <!-- Foto Profil NIM Genap -->
+    <div class="foto-profil-wrapper-kelompok-3">
+        <img src="assets/form/CAPIBARAAA.jpeg" alt="Foto Profil" class="foto-profil-genap">
+    </div>
+
 
     <form method="POST" action="" class="form-wrapper-kelompok-3">
 

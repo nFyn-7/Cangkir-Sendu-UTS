@@ -492,7 +492,6 @@ h6 {
   line-height: normal;
 }
 
-
 p {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -597,4 +596,9 @@ ul {
   .keuntungan-member-grid-kelompok-3 {
     grid-template-columns: 1fr;
   }
+}
+
+.foto-profil-wrapper-kelompok-3 {
+  display: flex;
+  justify-content: center;
 }
